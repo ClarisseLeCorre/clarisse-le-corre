@@ -1,10 +1,17 @@
+:root {
+  --primary-color: #1F46A6;
+  --secondary-color: #ebf0f1;
+  --text-color: #292a2c;
+}
+
 body {
     font-family: "Poppins", serif !important;
-    color: #292a2c !important;
+    color: var(--text-color);
     letter-spacing: 0.09em !important;
     font-size: 17px !important;
-    line-height: 2.2em !important;
+    line-height: 1.6 !important;
     text-align: justify !important;
+    background-color: white;
 }
 
 a {
@@ -12,9 +19,12 @@ a {
   color: inherit !important;
 }
 
-h1, h2, h3, h4 {
+a:focus {
+  outline: 2px dashed var(--primary-color);
+}
 
-  color: #292a2c !important;
+h1, h2, h3, h4 {
+  color: var(--text-color);
   line-height: 2 !important;
 }
 
@@ -23,7 +33,7 @@ h1, h2, h3, h4 {
 }
 
 .container {
-  max-width: 1040 !important;
+  max-width: 1200 !important;
 }
 
 
@@ -114,12 +124,17 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     cursor: pointer;
     padding: 0 !important;
+    color: var(--text-color);
   }
 
 
 
-  .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:hover {
+  .navbar-toggler, .navbar-toggler:hover {
     border: none !important;
+  }
+
+  a:focus {
+    outline: 2px dashed var(--primary-color);
   }
 
   .navbar-nav {
@@ -146,7 +161,7 @@ h1, h2, h3, h4 {
 
   .hero-content {
     background-color: white; 
-    padding: 30px;
+    padding: 80px 30px;
     height: 100%;
     display: flex; 
     flex-direction: column;
@@ -280,4 +295,12 @@ h3::before {
   #cabinet-row img {
     margin-top: 4vh !important;
   }
+}
+
+.legal {
+  font-size: 14px;
+  padding: 16px;
+  opacity: 0.7;
+  text-align: center;
+  line-height: 2em;
 }

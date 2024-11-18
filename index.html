@@ -386,21 +386,6 @@
         });
         });
 
-        mapboxgl.accessToken = 'pk.eyJ1Ijoibm9lbWllcGllcmFydCIsImEiOiJja283NWR1czkwNzZzMnZtdWl2OGZxcjhjIn0.L1NkLHkTIl3hayUXvkfOAg';
-        const map = new mapboxgl.Map({
-            container: 'map', // container ID
-            style: 'mapbox://styles/noemiepierart/cm3n0bxw700qn01s70gjba36r',
-            center: [2.333023,48.866674], // starting position [lng, lat]. Note that lat must be set between -90 and 90
-            zoom: 15 // starting zoom 
-        });
-
-        
-        map.addControl(new mapboxgl.NavigationControl());
-
-        new mapboxgl.Marker({color: '#1F46A6'})
-        .setLngLat([2.333023,48.866674])
-        .addTo(map);
-
         const navbarCollapse = document.getElementById('navbarSupportedContent');
         const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .btn-flat');
 
@@ -414,6 +399,50 @@
             }
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const mapContainer = document.getElementById('map');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Charger Mapbox uniquement lorsque l'utilisateur voit la carte
+                    loadMapbox();
+                    observer.disconnect();
+                }
+            });
+        });
+
+        observer.observe(mapContainer);
+
+        function loadMapbox() {
+            const mapboxScript = document.createElement('script');
+            mapboxScript.src = "https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js";
+            document.body.appendChild(mapboxScript);
+
+            mapboxScript.onload = () => {
+                const mapboxStyle = document.createElement('link');
+                mapboxStyle.rel = 'stylesheet';
+                mapboxStyle.href = "https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css";
+                document.head.appendChild(mapboxStyle);
+
+                // Initialiser la carte après chargement
+                mapboxgl.accessToken = 'pk.eyJ1Ijoibm9lbWllcGllcmFydCIsImEiOiJja283NWR1czkwNzZzMnZtdWl2OGZxcjhjIn0.L1NkLHkTIl3hayUXvkfOAg';
+                const map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/noemiepierart/cm3n0bxw700qn01s70gjba36r',
+                    center: [2.333023, 48.866674],
+                    zoom: 15
+                });
+
+                map.addControl(new mapboxgl.NavigationControl());
+
+                new mapboxgl.Marker({ color: '#1F46A6' })
+                    .setLngLat([2.333023, 48.866674])
+                    .addTo(map);
+            };
+        }
+    });
+       
     </script>
   </body>
 </html>

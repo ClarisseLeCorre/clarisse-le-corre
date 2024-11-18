@@ -273,7 +273,7 @@ details[open] > summary{
   margin-bottom: 32px;
 }
 
-a.mapboxgl-ctrl-logo {
+a.mapboxgl-ctrl-logo, .mapboxgl-ctrl-bottom-right {
   display: none !important;
 }
 

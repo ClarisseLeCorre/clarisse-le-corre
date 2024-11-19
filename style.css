@@ -8,10 +8,11 @@ body {
     font-family: "Poppins", serif !important;
     color: var(--text-color);
     letter-spacing: 0.09em !important;
-    font-size: 17px !important;
-    line-height: 1.6 !important;
-    text-align: justify !important;
+    font-size: 16px !important;
+    line-height: 2.2 !important;
     background-color: white;
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
 }
 
 a {
@@ -26,12 +27,21 @@ a:focus {
 h1, h2, h3, h4 {
   color: var(--text-color);
   line-height: 2 !important;
+
 }
 
 .section {
-    padding: 70px 4vw !important;
+    padding: 70px 12px !important;
 }
 
+h3::before {
+  display: block;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+  pointer-events: none;
+}
 .container {
   max-width: 1200 !important;
 }
@@ -82,6 +92,15 @@ h1, h2, h3, h4 {
   }
 
   @media(min-width: 992px) {
+    body {
+      text-align: justify !important;
+    }
+    .section {
+      padding: 70px 4vw !important;
+    }
+    .hero-section {
+      padding: 4vh !important;
+    }
     .nav-item {
       margin: 0 16px !important;
       border: none !important;
@@ -142,7 +161,7 @@ h1, h2, h3, h4 {
   }
 
   .hero-section {
-    padding: 4vh !important;
+    padding: 12px !important;
   }
 
   .hero-section img {
@@ -179,11 +198,11 @@ h1, h2, h3, h4 {
  h1 {
     margin: 0;
     color: white;
-    font-size: 32px !important;
+    font-size: 1.9em !important;
     font-weight: bold;  }
   
   h2 {
-    font-size: 24px !important;
+    font-size: 1.3em !important;
   }
 
 
@@ -249,6 +268,7 @@ details[open] > summary{
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 24px;
   line-height: 1.6em;
+  font-size: 15px;
 }
   
 .news-card .subtitle {
@@ -277,14 +297,15 @@ a.mapboxgl-ctrl-logo, .mapboxgl-ctrl-bottom-right {
   display: none !important;
 }
 
-h3::before {
+
+/* h3::before {
   display: block;
   content: " ";
   margin-top: -100px;
   height: 100px;
   visibility: hidden;
   pointer-events: none;
-}
+} */
 
 
 @media(max-width: 992px) {
@@ -298,7 +319,7 @@ h3::before {
 }
 
 .legal {
-  font-size: 14px;
+  font-size: 0.7em;
   padding: 16px;
   opacity: 0.7;
   text-align: center;

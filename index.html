@@ -73,19 +73,20 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent" aria-label="Main Navigation">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="/#cabinet">Le cabinet</a>
+                  <a class="nav-link" href="#cabinet" data-bs-target=".navbar-collapse" >Le cabinet</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/#activites">Activités</a>
+                  <a class="nav-link" href="#activites" data-bs-target=".navbar-collapse">Activités</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/#actualites">Actualités</a>
+                    <a class="nav-link" href="#actualites" data-bs-target=".navbar-collapse">Actualités</a>
                 </li>
                 <li>
                     <div class="d-flex">
-                        <a class="btn-flat" href="/#contact">Contact</a>
+                        <a class="btn-flat" href="#contact" data-bs-target=".navbar-collapse">Contact</a>
                     </div>
                 </li>
+
             </ul>
             </div>
         </div>
@@ -114,14 +115,14 @@
     </div>
 
 
-    <div class="section">
-        <div class="container">
-
+    <div class="section" >
+        <div class="container" >
+            <h3 id="cabinet">Le Cabinet</h3>
             <div class="row d-lg-flex flex-row-reverse" id="cabinet-row">
                 
                 <div class="col-12 col-md-8">
 
-                    <h3 id="cabinet">Le Cabinet</h3>
+                    
                     <div class="blue-line"></div>
                     
                     <p>Le cabinet assiste une clientèle française et étrangère composée de dirigeants, d’entreprises, d’élus et de particuliers devant les autorités de poursuite et juridictions de jugement, dans le cadre de procédures pénales à forts enjeux judiciaires, financiers et réputationnels.</p>
@@ -338,12 +339,12 @@
 
         <div class="container">
 
-            <div class="row mt-4">
-                <div class="col-3 illustration-img col-left" style="background-image: url(images/bleu.jpg);">
-                </div>
-                <div class="col-9">
+            <div class="row d-lg-flex flex-row-reverse mt-4">
+                <div class="col-12 col-md-9">
                     <h4>Une défense pluridisciplinaire</h4>
                     <p>Pour assurer au mieux la défense des intérêts de ses clients, le cabinet travaille étroitement avec de nombreux professionnels : avocats spécialisés dans des domaines complémentaires, avocats étrangers, experts, sociétés d’intelligence économique, conseillers en communication, sociétés de traçage des transactions en cryptomonnaies, etc.</p>
+                </div>
+                <div class="col-0 col-md-3 illustration-img col-left" style="background-image: url(images/bleu.jpg);">
                 </div>
             </div>
             
@@ -354,10 +355,10 @@
 
     <div class="section illustration-img"  style="background-image: url(images/contact.avif)">
         <div class="container">
-            <div class="row d-md-flex">
-                <div class="col-12 col-md-6">
-                    <div class="contact-container">
-                        <div id="contact" class="d-flex align-items-center" style="font-family: 'Amiri', serif;font-weight: 400; font-size: 26px">Clarisse Le Corre</div>
+            <div class="row d-lg-flex flex-row-reverse">
+                <div class="col-12 col-md-6 p-0">
+                    <div class="contact-container" id="contact">
+                        <div class="d-flex align-items-center" style="font-family: 'Amiri', serif;font-weight: 400; font-size: 26px">Clarisse Le Corre</div>
                         <div>49 rue Saint-Roch, 75001 Paris</div>
                         <div><a href="mailto:contact@lecorre-avocats.com" target="_blank">contact@lecorre-avocats.com</a></div>
                         <div><a href="">Tél. : + 33 (0) XX XX XX XX</a></div>
@@ -365,7 +366,7 @@
                         <div class="d-flex justify-content-center mt-3"><a href="https://www.linkedin.com/in/clarisse-le-corre-6235a22b/" target="_blank"><i class="fa-brands fa-linkedin-in ms-4"></i></a></div>
                         </div>
                 </div>
-                <div class="col-12 col-md-6 p-0 col-right">
+                <div class="col-12 col-md-6 p-0 illustration-img col-right">
                     <div id="map" style="height: 300px; width: 100%"></div>
                 </div>
             </div>
@@ -375,29 +376,27 @@
         <div>© Clarisse Le Corre - Tous droits réservés</div>
         <div>© Crédits Photos : Unsplash (Bady Abbas, Toa Heftiba, Adrien Ledoux, Jacob Wall, Ole Witt)</div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
+
+      // Toggle the vertical navbar when the user clicks on a link
+      const nav_items = document.querySelectorAll(".nav-item")
+      nav_items.forEach((nav_item) => {
+        nav_item.addEventListener("click", (event) => {
+          console.log("Pouet");
+          document.querySelector(".navbar-toggler").classList.toggle("collapsed");
+          document.querySelector("#navbarSupportedContent").classList.toggle("show")
+        })
+      })
+
         const detailsElements = document.querySelectorAll('details');
         
         detailsElements.forEach(function(details) {
         details.addEventListener('toggle', function() {
             this.querySelector('summary').classList.toggle('opened');
         });
-        });
-
-        const navbarCollapse = document.getElementById('navbarSupportedContent');
-        const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .btn-flat');
-
-        navbarLinks.forEach(link => {
-            link.addEventListener('click', () => {
-            // Check if the navbar is currently expanded
-            if (navbarCollapse.classList.contains('show')) {
-                const navbarToggler = document.querySelector('.navbar-toggler');
-                // Trigger a click on the toggler to collapse the navbar
-                navbarToggler.click();
-            }
-            });
         });
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -444,5 +443,6 @@
     });
        
     </script>
+
   </body>
 </html>

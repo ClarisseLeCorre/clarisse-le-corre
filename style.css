@@ -98,8 +98,8 @@ h3::before {
     .section {
       padding: 70px 4vw !important;
     }
-    .hero-section {
-      padding: 4vh !important;
+    #hero-section {
+      padding: 70px 4vh !important;
     }
     .nav-item {
       margin: 0 16px !important;
@@ -125,12 +125,12 @@ h3::before {
   }
 
   .navbar-brand-title {
-    font-size: 26px !important;
+    font-size: 1em !important;
     font-weight: 500 !important;
   }
 
   .navbar-brand-subtitle {
-    font-size: 16px !important;
+    font-size: 0.7em !important;
     font-weight: 400 !important;
     text-transform: uppercase;
   }
@@ -160,11 +160,11 @@ h3::before {
       align-items: start;
   }
 
-  .hero-section {
-    padding: 12px !important;
+  #hero-section {
+    padding: 12px 12px;
   }
 
-  .hero-section img {
+  #hero-section img {
     background-size: cover;
     background-position: center;
   }
@@ -178,7 +178,7 @@ h3::before {
     }
   }
 
-  .hero-content {
+  #hero-content {
     background-color: white; 
     padding: 80px 30px;
     height: 100%;

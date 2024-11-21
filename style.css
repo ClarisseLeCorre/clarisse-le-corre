@@ -216,6 +216,16 @@
     margin-bottom: 16px
   }
 
+
+  .carousel-item .active {
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel-inner {
+    margin: 32px auto
+  }
   /* .hero-card h2 {
     color: white !important;
   } */

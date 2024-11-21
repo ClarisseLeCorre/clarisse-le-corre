@@ -1,16 +1,17 @@
 /* GENERAL */
     :root {
-      --primary-color: #1F46A6;
-      --secondary-color: #ebf0f1;
-      --text-color: #292a2c;
+      --blue-color: #1F46A6;
+      --light-color: #ebf0f1;
+      --dark-color: #292a2c;
+      --beige-color: #fcf4e3;
     }
 
     body {
         font-family: "Poppins", serif !important;
-        color: var(--text-color);
-        letter-spacing: 0.09em !important;
+        color: var(--dark-color);
+        letter-spacing: 0.05em !important;
         font-size: 16px !important;
-        line-height: 2.2 !important;
+        line-height: 1.7 !important;
         background-color: white;
         overflow-x: hidden; 
         scroll-behavior: smooth; 
@@ -22,7 +23,7 @@
     }
 
     a:focus {
-      outline: 2px dashed var(--primary-color);
+      outline: 2px dashed var(--blue-color);
     }
 
 
@@ -41,15 +42,19 @@
     }
 
     .container {
-      max-width: 1200 !important;
+      max-width: 1200px !important;
+    }
+
+    .bg-light {
+        background-color: var(--light-color);
     }
 
     .bg-beige {
-        background-color: #ebf0f1;
-    }
+      background-color: var(--beige-color);
+  }
 
     .bg-blue {
-      background-color: #1F46A6 !important;
+      background-color: var(--blue-color) !important;
       color: white !important;
     }
 
@@ -127,7 +132,7 @@
     text-transform: uppercase;
     cursor: pointer;
     padding: 0 !important;
-    color: var(--text-color);
+    color: var(--dark-color);
   }
 
   .navbar-toggler, .navbar-toggler:hover {
@@ -142,6 +147,9 @@
 
   #hero-section {
     padding: 12px 12px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
   }
 
   #hero-section img {
@@ -159,12 +167,65 @@
     align-items: center;
   }
 
+  .banner {
+    padding: 32px 16px;
+    background-color: white;
+    opacity: 0.9;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hero-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-cards {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 16px;
+    }
+  }
+  .hero-card {
+    background-color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+
+  .hero-card h2 {
+    font-size: 1.2em !important;
+    line-height: 1.6em !important;
+  }
+
+  .hero-card img {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 16px
+  }
+
+  /* .hero-card h2 {
+    color: white !important;
+  } */
+
  /* HEADINGS  */
 
  h1, h2, h3, h4 {
-  color: var(--text-color);
+  color: var(--dark-color);
   line-height: 2 !important;
-
+  color: var(--blue-color) !important;
 }
 
  h1 {
@@ -177,10 +238,21 @@
     font-size: 1.3em !important;
   }
 
-  .blue-line {
+  h3 {
+    font-size: 2em !important;
+  }
+
+
+  .carousel-indicators [data-bs-target]{
+    background-color: var(--blue-color) !important; 
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .short-line {
     height: 8px;
     width: 48px;
-    background-color: #1F46A6;
     margin-bottom: 32px;
   }
 
@@ -189,17 +261,17 @@
   .btn-flat {
     color: white !important;
     padding: 4px 12px !important;
-    background: #2B384F !important;
+    background: var(--blue-color) !important;
     transition: background 0.3s ease;
     text-transform: uppercase;
     border-radius: 0 !important;
-    border: 2px solid #2B384F
+    border: 2px solid var(--blue-color)
   }
   
   .btn-flat:hover {
-    color: #2B384F !important;
+    color: var(--blue-color) !important;
     background-color: white !important;
-    border: 2px solid #2B384F
+    border: 2px solid var(--blue-color)
   }
 
   /* ABOUT SECTION */
@@ -225,6 +297,12 @@
       background-color: white;
       font-weight: 600;
   }
+
+  summary:hover {
+    color: white !important;
+    background-color: var(--blue-color) !important;
+  }
+
 
   summary i {
       margin-left: 12px;
@@ -308,9 +386,6 @@
     margin: 0 16px !important;
     border: none !important;
     min-width: 0px;
-  }
-  .nav-link {
-    margin: 0 16px !important;
   }
   .navbar-nav {
     border: none !important;

@@ -7,7 +7,7 @@
     }
 
     body {
-        font-family: "Poppins", serif !important;
+        font-family: "Nunito", sans-serif;
         color: var(--dark-color);
         letter-spacing: 0.05em !important;
         font-size: 16px !important;
@@ -110,18 +110,6 @@
   .navbar-brand, h1, h2, h3, h4 {
     color: #334E59 !important;
     font-family: "Lora", serif !important;
-    font-weight: 400 !important;
-  }
-
-  .navbar-brand-title {
-    font-size: 1em !important;
-    font-weight: 500 !important;
-  }
-
-  .navbar-brand-subtitle {
-    font-size: 0.7em !important;
-    font-weight: 400 !important;
-    text-transform: uppercase;
   }
   
   .navbar-brand img {
@@ -163,20 +151,10 @@
     background-position: center;
   }
 
-  #hero-content {
-    background-color: white; 
-    padding: 80px 30px;
-    height: 100%;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .banner {
     padding: 32px 16px;
-    background-color: white;
-    opacity: 0.9;
+    /* background-color: white;
+    opacity: 0.9; */
     display: flex; 
     flex-direction: column;
     justify-content: center;
@@ -184,44 +162,6 @@
     max-width: 600px;
     margin: 0 auto;
   }
-
-  .hero-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 16px;
-  }
-  
-  @media (min-width: 768px) {
-    .hero-cards {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 16px;
-    }
-  }
-  .hero-card {
-    background-color: white;
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-weight: bold;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  }
-
-  .hero-card h2 {
-    font-size: 1.2em !important;
-    line-height: 1.6em !important;
-  }
-
-  .hero-card img {
-    height: 200px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 16px
-  }
-
 
   .carousel-item .active {
     min-height: 180px;
@@ -311,7 +251,6 @@
       justify-content: space-between;
       align-items: start;
       background-color: white;
-      font-weight: 600;
   }
 
   summary:hover {
@@ -328,7 +267,7 @@
       display: none;
   }
 
-  .activity-detail {
+  .expertise-detail {
       background-color: white !important;
       padding: 16px;
       border-top: 2px solid #dee2e6;

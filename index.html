@@ -44,8 +44,8 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
 
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" defer rel="stylesheet">
@@ -61,27 +61,27 @@
 
     <div class="navbar navbar-expand-lg navbar-light navbar-lewagon">
         <div class="container">
-          <a class="navbar-brand" href="/index.html">
+            <a class="navbar-brand" href="/index.html">
             <img src="images/logo.png" width="150">
             </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <div class="collapse navbar-collapse" id="navbarSupportedContent" aria-label="Main Navigation">
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" aria-label="Main Navigation">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#cabinet" data-bs-target=".navbar-collapse" >Le cabinet</a>
+                    <a class="nav-link" href="#cabinet" data-bs-target=".navbar-collapse" >Le cabinet</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#expertise" data-bs-target=".navbar-collapse">Expertise</a>
+                    <a class="nav-link" href="#expertises" data-bs-target=".navbar-collapse">Expertises</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#actualites" data-bs-target=".navbar-collapse">Actualités</a>
                 </li>
                 <li class="nav-item">
                     <div class="d-flex">
-                        <a class="btn-flat" href="#contact" data-bs-target=".navbar-collapse">Contact</a>
+                        <a class="btn btn-flat" href="#contact" data-bs-target=".navbar-collapse">Contact</a>
                     </div>
                 </li>
 
@@ -90,41 +90,61 @@
         </div>
     </div>
 
-    <div class="illustration-img" id="hero-section" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://images.unsplash.com/photo-1463130456064-77fda7f96d6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
-        <div class="container">
-            <div class="banner">
-
-                <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                          <h2>Un cabinet indépendant <br>dédié à la défense pénale</h2>
-                      </div>
-                      <div class="carousel-item">
-                        <h2>Une défense sur-mesure, <br>combative et audacieuse</h2>
-                      </div>
-                      <div class="carousel-item">
-                        <h2>Des solutions ciblées <br>pour prévenir le risque pénal</h2>
-                      </div>
+    <div class="hero-section">
+        <div class="container p-0">
+            <div id="hero-split" class="d-lg-flex flex-row-reverse">
+                <div class="split-column" id="hero-split-infos">
+                    <h2 class="w-100">Cabinet indépendant <br>dédié à la <strong><em>défense pénale</em></strong><br>des entreprises, dirigeants & particuliers</h2>
+                    <div class="d-flex justify-content-center">
+                        <a href="#cabinet" class="btn btn-beige mt-4">Découvrir le cabinet</a>
                     </div>
                 </div>
-                    
+                <div class="split-media-container" id="hero-split-media-container">
+                    <img src="https://images.unsplash.com/photo-1577369311736-3fdfe579a765?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hero" class="hero-img">
+                </div>
             </div>
         </div>
     </div>
+
+
+    <!-- <div class="hero-section">
+        <div class="hero-container">
+            <div class="split">
+                <div class="split-column split-column-right">
+                    <img src="images/hero.png" alt="hero" class="hero-img">
+                </div>
+                <div class="split-column hero-content">
+                    <h2 class="w-100">Cabinet indépendant dédié à la <strong><em>défense pénale</em></strong><br>des entreprises, dirigeants & particuliers</h2>
+                    <div class="d-flex justify-content-center">
+                        <a href="#cabinet" class="btn btn-beige mt-4">Découvrir le cabinet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <div class="illustration-img" id="hero-section" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://images.unsplash.com/photo-1463130456064-77fda7f96d6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+        <div class="container">
+            <div class="banner">
+                <h2>Cabinet indépendant dédié à la <strong><em>défense pénale</em></strong><br>des entreprises, dirigeants & particuliers</h2>
+                <div class="d-flex justify-content-center">
+                    <a href="#cabinet" class="btn btn-flat mt-4">Découvrir le cabinet</a>
+                </div>
+            </div>
+                    
+            </div>
+        </div>
+    </div> -->
 
 
     <div class="section" >
         <div class="container" >
             <h3 id="cabinet">Le Cabinet</h3>
             <div class="short-line bg-blue"></div>
-            
-            <h3 style="font-family: 'Nunito', sans-serif !important;" class="mt-4" id="cabinet">Le Cabinet</h3>
-            <div class="short-line bg-blue"></div>
-            
 
-            <div class="row d-lg-flex flex-row-reverse" id="cabinet-row">
-                
-                <div class="col-12 col-md-8">
+            <div class="split lg-reverse" id="cabinet-row">
+                <div class="split-infos">
                     <h4>Une structure dédiée à la défense pénale</h4>
                     <p>Le cabinet assiste une clientèle française et étrangère composée de dirigeants, d’entreprises, d’élus et de particuliers devant les autorités de poursuite et juridictions de jugement, dans le cadre de procédures pénales à forts enjeux judiciaires, financiers et réputationnels.</p>
                     <p>Outre sa maîtrise du contentieux, le cabinet conseille les institutionnels dans l’identification, l’évaluation et la gestion de leur risque pénal, afin de sécuriser durablement leurs activités et prévenir les litiges.</p>
@@ -134,26 +154,23 @@
                     <p>Pour assurer au mieux la défense des intérêts de ses clients, le cabinet travaille étroitement avec de nombreux professionnels : avocats spécialisés dans des domaines complémentaires, avocats étrangers, experts, sociétés d’intelligence économique, conseillers en communication, sociétés de traçage des transactions en cryptomonnaies, etc. »</p>
 
                     <div class="d-flex justify-content-center">
-                        <a href="#expertise" class="btn-flat mt-4">Découvrez nos expertises</a>
+                        <a href="#expertises" class="btn btn-light mt-4">Découvrez nos expertises</a>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 illustration-img col-right" style="background-image: url(images/signature.jpg)">
-
+                <div class="split-media-container">
+                    <img src="images/geometrique.avif" alt="illustration">
+                </div>
                 </div>
             </div>
         </div>
     </div>
     
     
-    <div class="section bg-light" >
+    <div class="section bg-light-color" >
         <div class="container">
 
-            <h3 id="expertise">Expertise</h3>
+            <h3 id="expertises">Expertise</h3>
             <div class="short-line bg-blue"></div>
-            
-            <h3 style="font-family: 'Nunito', sans-serif !important;" class="mt-4" id="cabinet">Expertise</h3>
-            <div class="short-line bg-blue"></div>
-            
 
             <details>
                 <summary>
@@ -219,7 +236,7 @@
             </details>
 
             <div class="d-flex justify-content-center">
-                <a href="#contact" class="btn-flat mt-4">Contactez-nous</a>
+                <a href="#contact" class="btn btn-light mt-4">Contactez-nous</a>
             </div>
 
         </div>
@@ -231,9 +248,9 @@
             <h3 class="text-white">Clarisse Le Corre</h3>
             <div class="short-line bg-white"></div>
 
-            <div class="row d-lg-flex flex-row-reverse">
+            <div class="split lg-reverse">
                
-                <div class="col-12 col-lg-8">
+                <div class="split-infos">
 
                     <p>Avocate au barreau de Paris depuis 2012, Clarisse Le Corre a exercé pendant dix ans dans un cabinet français de premier plan en droit pénal des affaires, avant de fonder son propre cabinet.</p>
 
@@ -247,15 +264,15 @@
 
                     <p>Elle travaille indifféremment en français et en anglais. </p>
 
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center mt-4">
                         <a href="https://www.linkedin.com/in/clarisse-le-corre-6235a22b/" target="_blank"><img src="images/linkedin_white.png" width="30"></a>
                         <a href="mailto:contact@lecorre-avocats.com" target="_blank"><img src="images/email.png" width="30" class="ms-4"></a>
 
                     </div>
 
                 </div>
-                <div class="col-12 col-lg-4 d-flex justify-content-center align-items-start">
-                    <img src="images/portrait.png" alt="portrait" class="portrait">
+                <div class="split-media-container">
+                    <img src="images/portrait.png" alt="portrait" class="portrait object-fit-contain object-fit-lg-cover">
                 </div>
             </div>
             
@@ -266,10 +283,6 @@
         <div class="container">
             <h3 id="actualites">Actualités</h3>
             <div class="short-line bg-blue"></div>
-
-            <h3 style="font-family: 'Nunito', sans-serif !important;" class="mt-4" id="cabinet">Actualités</h3>
-            <div class="short-line bg-blue"></div>
-            
 
             <div class="row d-lg-flex">
                 
@@ -290,7 +303,7 @@
 
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7161349691043934210/" target="_blank">
                             <div class="news-card">
-                                <div class="title">Séminaire de droit pénal des affaires Université</div>
+                                <div class="title">Séminaire de droit pénal des affaires</div>
                                 <div class="subtitle">Université de Montpellier (Master de Droit bancaire et financier) | <span class="date">5 & 6 février 2024</span></div>
                             </div>
                         </a>
@@ -371,8 +384,8 @@
                 </div>
 
             </div>
-            <div class="d-flex justify-content-center">
-                <a href="actualites.html" class="btn-flat mt-4">Toutes les actualités</a>
+            <div class="d-flex justify-content-center mt-4">
+                <a href="actualites.html" class="btn btn-light mt-4">Toutes les actualités</a>
             </div>
         </div>
     </div>
@@ -381,37 +394,37 @@
 
         <div class="container">
 
-            <div class="row d-lg-flex flex-row-reverse mt-4">
-                <div class="col-12 col-md-9">
-                    <h4>Honoraires</h4>
+            <div class="split lg-reverse">
+                <div class="split-infos">
+                    <h4 class="mb-3">Honoraires</h4>
                     <p>Les honoraires sont librement fixés d’un commun accord avec le client. Ils peuvent être établis selon plusieurs modalités de facturation (facturation au temps passé, forfait, honoraire de résultat) en tenant compte de la complexité du dossier, de la situation économique du client, des délais d’intervention et des diligences à réaliser.</p>
                     <p> Les honoraires sont clairement définis à l’avance : ils font l'objet d'une convention écrite qui précise le montant et le mode de détermination des honoraires relatifs aux diligences prévisibles. A la demande du client, toute facturation est accompagnée d’un relevé de diligences. »</p>
                     <div class="d-flex justify-content-center mt-4">
-                        <a href="mailto:contact@lecorre-avocats.com" class="btn-flat mt-4">Demandez une proposition de mission</a>
+                        <a href="mailto:contact@lecorre-avocats.com" class="btn btn-light mt-4">Demandez une proposition de mission</a>
                     </div>
                 </div>
-                <div class="col-0 col-md-3 illustration-img col-left" style="background-image: url(images/bleu.jpg);">
+                <div class="split-media-container">
+                    <img src="images/jaune.jpg" alt="honoraires">
                 </div>
             </div>
-            
-            
+        
         </div>
     </div>
 
 
-    <div class="section illustration-img"  style="background-image: url(https://images.unsplash.com/photo-1486848538113-ce1a4923fbc5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MjB8aE15TFVfOTZpeFF8fGVufDB8fHx8fA%3D%3D)">
-        <div class="container" style="max-width: 800px !important";>
+    <div class="section bg-light-color">
+        <div class="container";>
+            <h3 id="contact">Contact</h3>
+            <div class="short-line bg-blue"></div>
             <div class="row">
-                <div class="col-12 col-md-6 p-0">
-                    <div class="contact-container" id="contact">
-                        <img src="images/logo.png" width="150" class="mx-auto mb-3">
-                        <div>49 rue Saint-Roch, 75001 Paris</div>
-                        <div><a href="mailto:contact@lecorre-avocats.com" target="_blank">contact@lecorre-avocats.com</a></div>
-                        <div><a href="tel: +33 (0)1 42 68 26 02">Tél. :  +33 (0)1 42 68 26 02</a></div>
-                        <div class="d-flex justify-content-center mt-3"><a href="https://www.linkedin.com/in/clarisse-le-corre-6235a22b/" target="_blank"><img src="images/linkedin.png" width="30" height="30"></a></div>
-                        </div>
+                <div class="col-12 col-md-6 bg-white d-flex align-items-center justify-content-center flex-column py-3">
+                    <img src="images/logo.png" width="120" class="mx-auto mb-5">
+                    <div>49 rue Saint-Roch, 75001 Paris</div>
+                    <div class="my-3"><a href="mailto:contact@lecorre-avocats.com" target="_blank">contact@lecorre-avocats.com</a></div>
+                    <div><a href="tel: +33 (0)1 42 68 26 02">Tél. :  +33 (0)1 42 68 26 02</a></div>
+                    <div class="d-flex justify-content-center mt-3"><a href="https://www.linkedin.com/in/clarisse-le-corre-6235a22b/" target="_blank"><img src="images/linkedin.png" width="30" height="30"></a></div>
                 </div>
-                <div class="col-12 col-md-6 p-0 illustration-img col-right">
+                <div class="col-12 col-md-6 p-0 col-right">
                     <div id="map" style="height: 300px; width: 100%"></div>
                 </div>
             </div>

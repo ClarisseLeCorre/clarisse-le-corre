@@ -76,7 +76,7 @@
 
     @media(max-width: 768px) {
       .illustration-img {
-        min-height: 400px;
+        min-height: 250px;
       }
       .col-right {
         margin-top: 32px !important;
@@ -159,7 +159,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    min-height: 300px;
+    min-height: 250px;
   }
 
   .split-media-container img {
@@ -258,9 +258,9 @@
     font-weight: bold;  }
   
   h2 {
-    font-size: 1.8em !important;
+    font-size: 1.3em !important;
     text-align: center;
-    line-height: 1.8em !important;
+    line-height: 1.3em !important;
     font-weight: 400 !important;
   }
 

@@ -339,6 +339,7 @@
       font-weight: 600;
       text-transform: uppercase;
       font-size: 1.2em;
+      color: var(--blue-color)
   }
 
   summary i {

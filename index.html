@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+    <head>
 
     <meta charset="utf-8">
     
@@ -56,451 +56,487 @@
    
 
 
-  </head>
-  <body>
-
-    <div class="navbar navbar-expand-lg navbar-light navbar-lewagon">
-        <div class="container">
-            <a class="navbar-brand" href="/index.html">
-            <img src="images/logo.png" width="150">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" aria-label="Main Navigation">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#cabinet" data-bs-target=".navbar-collapse" >Le cabinet</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#expertises" data-bs-target=".navbar-collapse">Expertises</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#actualites" data-bs-target=".navbar-collapse">Actualités</a>
-                </li>
-                <li class="nav-item">
-                    <div class="d-flex">
-                        <a class="btn btn-flat" href="#contact" data-bs-target=".navbar-collapse">Contact</a>
-                    </div>
-                </li>
-
-            </ul>
+    </head>
+    <body>
+        <!-- Modal Bootstrap pour le mot de passe -->
+        <div class="modal fade" id="passwordModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Accès protégé</h5>
+                </div>
+                <div class="modal-body">
+                <input type="password" id="passwordInput" class="form-control" placeholder="Mot de passe">
+                </div>
+                <div class="modal-footer">
+                <button class="btn btn-primary" onclick="checkPassword()">Entrer</button>
+                </div>
+            </div>
             </div>
         </div>
-    </div>
 
-    <div class="hero-section">
-        <div class="container p-0">
-            <div id="hero-split" class="d-lg-flex flex-row-reverse">
-                <div class="split-column" id="hero-split-infos">
-                    <h2 class="w-100">Cabinet indépendant <br>dédié à la <strong><em>défense pénale</em></strong><br>des entreprises, dirigeants & particuliers</h2>
-                    <div class="d-flex justify-content-center">
-                        <a href="#cabinet" class="btn btn-beige mt-4">Découvrir le cabinet</a>
-                    </div>
-                </div>
-                <div class="split-media-container" id="hero-split-media-container">
-                    <img src="https://images.unsplash.com/photo-1577369311736-3fdfe579a765?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hero" class="hero-img">
-                </div>
-            </div>
-        </div>
-    </div>
+        <div id="content" class="d-none">
+            <div class="navbar navbar-expand-lg navbar-light navbar-lewagon">
+                <div class="container">
+                    <a class="navbar-brand" href="/index.html">
+                    <img src="images/logo.png" width="150">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" aria-label="Main Navigation">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#cabinet" data-bs-target=".navbar-collapse" >Le cabinet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#expertises" data-bs-target=".navbar-collapse">Expertises</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#actualites" data-bs-target=".navbar-collapse">Actualités</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="d-flex">
+                                <a class="btn btn-flat" href="#contact" data-bs-target=".navbar-collapse">Contact</a>
+                            </div>
+                        </li>
 
-
-    <!-- <div class="hero-section">
-        <div class="hero-container">
-            <div class="split">
-                <div class="split-column split-column-right">
-                    <img src="images/hero.png" alt="hero" class="hero-img">
-                </div>
-                <div class="split-column hero-content">
-                    <h2 class="w-100">Cabinet indépendant dédié à la <strong><em>défense pénale</em></strong><br>des entreprises, dirigeants & particuliers</h2>
-                    <div class="d-flex justify-content-center">
-                        <a href="#cabinet" class="btn btn-beige mt-4">Découvrir le cabinet</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-    <!-- <div class="illustration-img" id="hero-section" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://images.unsplash.com/photo-1463130456064-77fda7f96d6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
-        <div class="container">
-            <div class="banner">
-                <h2>Cabinet indépendant dédié à la <strong><em>défense pénale</em></strong><br>des entreprises, dirigeants & particuliers</h2>
-                <div class="d-flex justify-content-center">
-                    <a href="#cabinet" class="btn btn-flat mt-4">Découvrir le cabinet</a>
-                </div>
-            </div>
-                    
-            </div>
-        </div>
-    </div> -->
-
-
-    <div class="section" >
-        <div class="container" >
-            <h3 id="cabinet">Le Cabinet</h3>
-            <div class="short-line bg-blue"></div>
-
-            <div class="split lg-reverse" id="cabinet-row">
-                <div class="split-infos">
-                    <h4>Une structure consacrée à la défense pénale</h4>
-                    <p>Le cabinet assiste une clientèle française et étrangère composée de dirigeants, d’entreprises, d’élus et de particuliers devant les autorités de poursuite et juridictions de jugement, dans le cadre de <strong>procédures pénales à forts enjeux judiciaires, financiers et réputationnels</strong>.</p>
-                    <p>Outre sa maîtrise du contentieux, le cabinet conseille les institutionnels dans l’<strong>identification, l’évaluation et la gestion de leur risque pénal</strong>, afin de sécuriser durablement leurs activités et prévenir les litiges.</p>
-                    <p>Fort de plus de 10 années d’expérience et d’une expertise éprouvée du conseil et du contentieux pénal, le cabinet s’attache à offrir à ses clients un <strong>accompagnement sur-mesure, alliant technicité, humanité et ténacité.</strong></p>
-
-                    <h4 class="mt-4">Un réseau pluridisciplinaire</h4>
-                    <p>Pour assurer au mieux la défense des intérêts de ses clients, le cabinet travaille étroitement avec de nombreux professionnels : avocats spécialisés dans des domaines complémentaires, avocats étrangers, experts, sociétés d’intelligence économique, conseillers en communication, sociétés de traçage des transactions en cryptomonnaies, etc.</p>
-
-                    <div class="d-flex justify-content-center">
-                        <a href="#expertises" class="btn btn-light mt-4">Découvrez nos expertises</a>
-                    </div>
-                </div>
-                <div class="split-media-container">
-                    <img src="images/geometrique.avif" alt="illustration">
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="section bg-light" >
-        <div class="container">
-
-            <h3 id="expertises">Expertises</h3>
-            <div class="short-line bg-blue"></div>
-
-            <details>
-                <summary>
-                <div class="d-inline">Prévention du risque pénal en entreprise</div>
-                <i class="fa-solid fa-chevron-down"></i>
-                </summary>
-                <div class="expertise-detail"><p>Fort de sa pratique du contentieux pénal, le cabinet a développé une expertise spécifique et reconnue dans <strong>l’accompagnement des institutionnels pour anticiper et maîtriser le risque pénal </strong>afférent à leurs activités.</p>
-                <div>Depuis plus de 10 ans, Clarisse Le Corre conseille des<strong> entreprises de toute taille et dans tous les secteurs d’activités </strong>(BTP, transport, grande distribution, industrie, santé, tourisme, recyclage, etc.) en matière de :</div>
-                <ul>
-                    <li>Cartographie du risque pénal</li>
-                    <li>Délégations de pouvoirs et délégations de signature</li>
-                    <li>Formation et sensibilisation des dirigeants</li>
-                    <li>Procédures internes de gestion du risque</li>
-                </ul>
-                </div>
-            </details>
-
-            <details>
-                <summary>
-                <div class="d-inline">Défense pénale de l’entreprise, des dirigeants et des particuliers</div>
-                <i class="fa-solid fa-chevron-down"></i>
-                </summary>
-                <div class="expertise-detail">
-                    <p>Le cabinet assure la défense des personnes morales et physiques sur tous les aspects du droit
-                    pénal :</p>
-                    <ul>
-                        <li><strong>Droit pénal général </strong>: atteintes aux personnes (homicide volontaire ou involontaire, atteintes sexuelles, etc.) et aux biens (vol, extorsion, chantage, etc.)</li>
-                        <li><strong>Droit pénal des affaires </strong>: blanchiment, fraude fiscale, corruption, trafic d’influence, escroquerie, abus de confiance, abus de biens sociaux</li>
-                        <li><strong>Droit pénal financier  </strong>: délit d’initié, manipulation de marché, présentation de faux bilan, diffusion de fausses informations</li>
-                        <li><strong>Atteintes à la probité </strong>: corruption, détournement de fonds publics, favoritisme et prise illégale d’intérêt</li>
-                        <li><strong>Droit pénal du travail </strong>: harcèlement, discrimination, accident du travail, travail dissimulé, prêt illicite de main d’œuvre, marchandage, délit d’entrave</li>
-                        <li><strong>Droit pénal de la consommation </strong> pratiques commerciales trompeuses et agressives, défaut de conformité et de sécurité des produits, infractions en matière de publicité réglementée</li>
-                        <li><strong>Droit de la presse et e-réputation </strong>: diffamation, injure, atteintes à la vie privée, atteinte à la présomption d’innocence, demande de suppression ou de déréférencement de contenu en ligne, droit de réponse</li>
-                        <li><strong>Cybercriminalité </strong>: piratage, usurpation d’identité, hameçonnage, fraude au président, vol de données</li>
-                        <li><strong>Contestation de saisies pénales</strong></li>
                     </ul>
-                <br>
-                <p>Le cabinet dispose par ailleurs d’une expertise de niche en matière de :</p>
-                <ul>
-                    <li><strong>Droit pénal de l’environnement </strong>: le cabinet intervient pour des institutionnels (infractions environnementales, allégations environnementales trompeuses, négociation de CJIP environnementale) et des éco-organismes (Responsabilité Elargie des Producteurs), mais également en défense de chasseurs, éleveurs et taxidermistes mis en cause dans le cadre de procédures diligentées par l’Office français de la biodiversité</li>
-                    <li><strong>Contentieux pénal des cryptoactifs </strong>: le cabinet représente tant des investisseurs victimes de fraudes dans les cryptomonnaies que des porteurs de projets mis en cause dans le cadre de procédures pénales, en France et à l’étranger</li>
-                </ul>
-            </details>
-
-            <details>
-                <summary>
-                <div class="d-inline">Conformité et enquêtes internes</div>
-                <i class="fa-solid fa-chevron-down"></i>
-                </summary>
-                <div class="expertise-detail">
-                    <p>Le cabinet assiste les institutionnels dans la mise en place de <strong>dispositifs d’alerte interne et programmes de conformité en matière de devoir de vigilance et LCB-FT </strong>(cartographie des risques sociaux, environnementaux et de gouvernance, procédure d’évaluation des tiers, charte éthique, code anticorruption, dispositif de suivi des mesures de conformité).</p>
-                    <p>Il accompagne par ailleurs les personnes physiques ou morales dans le cadre d'<strong>enquêtes internes.</strong></p>
-                    <p>Le champ d’intervention du cabinet couvre également le <strong>droit des données personnelles</strong> (audit CNIL, conformité RGPD).
-                    </p>
+                    </div>
                 </div>
-            </details>
-
-            <details>
-                <summary>
-                <div class="d-inline">Stratégie de crise et gestion de la réputation</div>
-                <i class="fa-solid fa-chevron-down"></i>
-                </summary>
-                <div class="expertise-detail">Rompu aux dossiers à forts enjeux réputationnels, le cabinet accompagne ses clients institutionnels et leurs dirigeants pour <strong>gérer la communication interne et externe en cas de crise judiciaire, minimiser l’impact sur leur réputation et préserver la confiance des partenaires de l’entreprise, </strong>clients, actionnaires et investisseurs.</div>
-            </details>
-
-            <div class="d-flex justify-content-center">
-                <a href="#contact" class="btn btn-light mt-4">Contactez-nous</a>
             </div>
 
-        </div>
-
-    </div>
-
-    <div class="section bg-blue">
-        <div class="container">
-            <h3 class="text-white">Clarisse Le Corre</h3>
-            <div class="short-line bg-white"></div>
-
-            <div class="split lg-reverse">
-               
-                <div class="split-infos">
-
-                    <p>Avocate au barreau de Paris depuis 2012, Clarisse Le Corre a exercé pendant dix ans dans un cabinet français de premier plan en droit pénal des affaires, avant de fonder son propre cabinet.</p>
-
-                    <p>Elle est diplômée de l’Ecole de droit de Sciences Po Paris (2010) et a également étudié à Columbia University (New York) et McGill Law School (Montréal).</p>
-
-                    <p>Clarisse Le Corre est chargée d’enseignement à Sciences Po Paris ainsi qu’à la Faculté de droit et de science politique de l’Université de Montpellier (Master Droit bancaire et financier). </p>
-
-                    <p>Elle intervient régulièrement au sein d’organismes de formation professionnelle sur des sujets afférents à la matière pénale. Elle est l’auteure de nombreuses publications sur la responsabilité pénale des personnes morales et de leurs dirigeants.</p>
-
-                    <p>Clarisse Le Corre est membre de l’Association des Avocats Pénalistes, de l’Alliance des Avocats pour les Droits de l’Homme et de Women’s White Collar Defense Association. Elle est par ailleurs secrétaire générale de l’Association Sciences Po Alumni.</p>
-
-                    <p>Elle travaille indifféremment en français et en anglais. </p>
-
-                    <div class="d-flex justify-content-center mt-4">
-                        <a href="https://www.linkedin.com/in/clarisse-le-corre-6235a22b/" target="_blank"><img src="images/linkedin_white.png" width="30"></a>
-                        <a href="mailto:contact@lecorre-avocats.com" target="_blank"><img src="images/email.png" width="30" class="ms-4"></a>
-
+            <div class="hero-section">
+                <div class="container p-0">
+                    <div id="hero-split" class="d-lg-flex flex-row-reverse">
+                        <div class="split-column" id="hero-split-infos">
+                            <h2 class="w-100">Cabinet indépendant <br>dédié à la <strong><em>défense pénale</em></strong><br>des entreprises, dirigeants & particuliers</h2>
+                            <div class="d-flex justify-content-center">
+                                <a href="#cabinet" class="btn btn-beige mt-4">Découvrir le cabinet</a>
+                            </div>
+                        </div>
+                        <div class="split-media-container" id="hero-split-media-container">
+                            <img src="https://images.unsplash.com/photo-1577369311736-3fdfe579a765?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="hero" class="hero-img">
+                        </div>
                     </div>
-
                 </div>
-                <div class="split-media-container">
-                    <img src="images/portrait.png" alt="portrait" class="portrait object-fit-contain object-fit-lg-cover">
+            </div>
+
+            <!-- <div class="hero-section">
+                <div class="hero-container">
+                    <div class="split">
+                        <div class="split-column split-column-right">
+                            <img src="images/hero.png" alt="hero" class="hero-img">
+                        </div>
+                        <div class="split-column hero-content">
+                            <h2 class="w-100">Cabinet indépendant dédié à la <strong><em>défense pénale</em></strong><br>des entreprises, dirigeants & particuliers</h2>
+                            <div class="d-flex justify-content-center">
+                                <a href="#cabinet" class="btn btn-beige mt-4">Découvrir le cabinet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!-- <div class="illustration-img" id="hero-section" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://images.unsplash.com/photo-1463130456064-77fda7f96d6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+                <div class="container">
+                    <div class="banner">
+                        <h2>Cabinet indépendant dédié à la <strong><em>défense pénale</em></strong><br>des entreprises, dirigeants & particuliers</h2>
+                        <div class="d-flex justify-content-center">
+                            <a href="#cabinet" class="btn btn-flat mt-4">Découvrir le cabinet</a>
+                        </div>
+                    </div>
+                            
+                    </div>
+                </div>
+            </div> -->
+
+
+            <div class="section" >
+                <div class="container" >
+                    <h3 id="cabinet">Le Cabinet</h3>
+                    <div class="short-line bg-blue"></div>
+
+                    <div class="split lg-reverse" id="cabinet-row">
+                        <div class="split-infos">
+                            <h4>Une structure consacrée à la défense pénale</h4>
+                            <p>Le cabinet assiste une clientèle française et étrangère composée de dirigeants, d’entreprises, d’élus et de particuliers devant les autorités de poursuite et juridictions de jugement, dans le cadre de <strong>procédures pénales à forts enjeux judiciaires, financiers et réputationnels</strong>.</p>
+                            <p>Outre sa maîtrise du contentieux, le cabinet conseille les institutionnels dans l’<strong>identification, l’évaluation et la gestion de leur risque pénal</strong>, afin de sécuriser durablement leurs activités et prévenir les litiges.</p>
+                            <p>Fort de plus de 10 années d’expérience et d’une expertise éprouvée du conseil et du contentieux pénal, le cabinet s’attache à offrir à ses clients un <strong>accompagnement sur-mesure, alliant technicité, humanité et ténacité.</strong></p>
+
+                            <h4 class="mt-4">Un réseau pluridisciplinaire</h4>
+                            <p>Pour assurer au mieux la défense des intérêts de ses clients, le cabinet travaille étroitement avec de nombreux professionnels : avocats spécialisés dans des domaines complémentaires, avocats étrangers, experts, sociétés d’intelligence économique, conseillers en communication, sociétés de traçage des transactions en cryptomonnaies, etc.</p>
+
+                            <div class="d-flex justify-content-center">
+                                <a href="#expertises" class="btn btn-light mt-4">Découvrez nos expertises</a>
+                            </div>
+                        </div>
+                        <div class="split-media-container">
+                            <img src="images/geometrique.avif" alt="illustration">
+                        </div>
+                    </div>
                 </div>
             </div>
             
-        </div>
-    </div>
+            
+            <div class="section bg-light" >
+                <div class="container">
 
-    <div class="section bg-light" >
-        <div class="container">
-            <h3 id="actualites">Actualités</h3>
-            <div class="short-line bg-blue"></div>
+                    <h3 id="expertises">Expertises</h3>
+                    <div class="short-line bg-blue"></div>
 
-            <div class="row d-lg-flex news-block">
-                
-                <div class="col-12 col-md-8 p-0">
-                    <div class="news-cards">
+                    <details>
+                        <summary>
+                        <div class="d-inline">Prévention du risque pénal en entreprise</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        </summary>
+                        <div class="expertise-detail"><p>Fort de sa pratique du contentieux pénal, le cabinet a développé une expertise spécifique et reconnue dans <strong>l’accompagnement des institutionnels pour anticiper et maîtriser le risque pénal </strong>afférent à leurs activités.</p>
+                        <div>Depuis plus de 10 ans, Clarisse Le Corre conseille des<strong> entreprises de toute taille et dans tous les secteurs d’activités </strong>(BTP, transport, grande distribution, industrie, santé, tourisme, recyclage, etc.) en matière de :</div>
+                        <ul>
+                            <li>Cartographie du risque pénal</li>
+                            <li>Délégations de pouvoirs et délégations de signature</li>
+                            <li>Formation et sensibilisation des dirigeants</li>
+                            <li>Procédures internes de gestion du risque</li>
+                        </ul>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                        <div class="d-inline">Défense pénale de l’entreprise, des dirigeants et des particuliers</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        </summary>
+                        <div class="expertise-detail">
+                            <p>Le cabinet assure la défense des personnes morales et physiques sur tous les aspects du droit
+                            pénal :</p>
+                            <ul>
+                                <li><strong>Droit pénal général </strong>: atteintes aux personnes (homicide volontaire ou involontaire, atteintes sexuelles, etc.) et aux biens (vol, extorsion, chantage, etc.)</li>
+                                <li><strong>Droit pénal des affaires </strong>: blanchiment, fraude fiscale, corruption, trafic d’influence, escroquerie, abus de confiance, abus de biens sociaux</li>
+                                <li><strong>Droit pénal financier  </strong>: délit d’initié, manipulation de marché, présentation de faux bilan, diffusion de fausses informations</li>
+                                <li><strong>Atteintes à la probité </strong>: corruption, détournement de fonds publics, favoritisme et prise illégale d’intérêt</li>
+                                <li><strong>Droit pénal du travail </strong>: harcèlement, discrimination, accident du travail, travail dissimulé, prêt illicite de main d’œuvre, marchandage, délit d’entrave</li>
+                                <li><strong>Droit pénal de la consommation </strong> pratiques commerciales trompeuses et agressives, défaut de conformité et de sécurité des produits, infractions en matière de publicité réglementée</li>
+                                <li><strong>Droit de la presse et e-réputation </strong>: diffamation, injure, atteintes à la vie privée, atteinte à la présomption d’innocence, demande de suppression ou de déréférencement de contenu en ligne, droit de réponse</li>
+                                <li><strong>Cybercriminalité </strong>: piratage, usurpation d’identité, hameçonnage, fraude au président, vol de données</li>
+                                <li><strong>Contestation de saisies pénales</strong></li>
+                            </ul>
+                        <br>
+                        <p>Le cabinet dispose par ailleurs d’une expertise de niche en matière de :</p>
+                        <ul>
+                            <li><strong>Droit pénal de l’environnement </strong>: le cabinet intervient pour des institutionnels (infractions environnementales, allégations environnementales trompeuses, négociation de CJIP environnementale) et des éco-organismes (Responsabilité Elargie des Producteurs), mais également en défense de chasseurs, éleveurs et taxidermistes mis en cause dans le cadre de procédures diligentées par l’Office français de la biodiversité</li>
+                            <li><strong>Contentieux pénal des cryptoactifs </strong>: le cabinet représente tant des investisseurs victimes de fraudes dans les cryptomonnaies que des porteurs de projets mis en cause dans le cadre de procédures pénales, en France et à l’étranger</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>
+                        <div class="d-inline">Conformité et enquêtes internes</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        </summary>
+                        <div class="expertise-detail">
+                            <p>Le cabinet assiste les institutionnels dans la mise en place de <strong>dispositifs d’alerte interne et programmes de conformité en matière de devoir de vigilance et LCB-FT </strong>(cartographie des risques sociaux, environnementaux et de gouvernance, procédure d’évaluation des tiers, charte éthique, code anticorruption, dispositif de suivi des mesures de conformité).</p>
+                            <p>Il accompagne par ailleurs les personnes physiques ou morales dans le cadre d'<strong>enquêtes internes.</strong></p>
+                            <p>Le champ d’intervention du cabinet couvre également le <strong>droit des données personnelles</strong> (audit CNIL, conformité RGPD).
+                            </p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>
+                        <div class="d-inline">Stratégie de crise et gestion de la réputation</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        </summary>
+                        <div class="expertise-detail">Rompu aux dossiers à forts enjeux réputationnels, le cabinet accompagne ses clients institutionnels et leurs dirigeants pour <strong>gérer la communication interne et externe en cas de crise judiciaire, minimiser l’impact sur leur réputation et préserver la confiance des partenaires de l’entreprise, </strong>clients, actionnaires et investisseurs.</div>
+                    </details>
+
+                    <div class="d-flex justify-content-center">
+                        <a href="#contact" class="btn btn-light mt-4">Contactez-nous</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="section bg-blue">
+                <div class="container">
+                    <h3 class="text-white">Clarisse Le Corre</h3>
+                    <div class="short-line bg-white"></div>
+
+                    <div class="split lg-reverse">
                     
-                        <h4 class="text-center">Interventions</h4>
-                        <hr>
+                        <div class="split-infos">
 
-                        <a href="https://www.lecorre-avocats.com/actualites/EFE_15_octobre_2024.pdf" target="_blank">
-                            <div class="news-card">
-                                <div class="title">« Délégations de pouvoirs, délégations de signature :
-                                    quelles nouvelles pratiques adopter ? » </div>
-                                <div class="subtitle">Conférence EFE | <span class="date">15 octobre 2024</span></div>
+                            <p>Avocate au barreau de Paris depuis 2012, Clarisse Le Corre a exercé pendant dix ans dans un cabinet français de premier plan en droit pénal des affaires, avant de fonder son propre cabinet.</p>
+
+                            <p>Elle est diplômée de l’Ecole de droit de Sciences Po Paris (2010) et a également étudié à Columbia University (New York) et McGill Law School (Montréal).</p>
+
+                            <p>Clarisse Le Corre est chargée d’enseignement à Sciences Po Paris ainsi qu’à la Faculté de droit et de science politique de l’Université de Montpellier (Master Droit bancaire et financier). </p>
+
+                            <p>Elle intervient régulièrement au sein d’organismes de formation professionnelle sur des sujets afférents à la matière pénale. Elle est l’auteure de nombreuses publications sur la responsabilité pénale des personnes morales et de leurs dirigeants.</p>
+
+                            <p>Clarisse Le Corre est membre de l’Association des Avocats Pénalistes, de l’Alliance des Avocats pour les Droits de l’Homme et de Women’s White Collar Defense Association. Elle est par ailleurs secrétaire générale de l’Association Sciences Po Alumni.</p>
+
+                            <p>Elle travaille indifféremment en français et en anglais. </p>
+
+                            <div class="d-flex justify-content-center mt-4">
+                                <a href="https://www.linkedin.com/in/clarisse-le-corre-6235a22b/" target="_blank"><img src="images/linkedin_white.png" width="30"></a>
+                                <a href="mailto:contact@lecorre-avocats.com" target="_blank"><img src="images/email.png" width="30" class="ms-4"></a>
+
                             </div>
-                        </a>
-                        <hr>
 
-                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7161349691043934210/" target="_blank">
-                            <div class="news-card">
-                                <div class="title">Séminaire de droit pénal des affaires</div>
-                                <div class="subtitle">Université de Montpellier (Master de Droit bancaire et financier) | <span class="date">5 & 6 février 2024</span></div>
+                        </div>
+                        <div class="split-media-container">
+                            <img src="images/portrait.png" alt="portrait" class="portrait object-fit-contain object-fit-lg-cover">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="section bg-light" >
+                <div class="container">
+                    <h3 id="actualites">Actualités</h3>
+                    <div class="short-line bg-blue"></div>
+
+                    <div class="row d-lg-flex news-block">
+                        
+                        <div class="col-12 col-md-8 p-0">
+                            <div class="news-cards">
+                            
+                                <h4 class="text-center">Interventions</h4>
+                                <hr>
+
+                                <a href="https://www.lecorre-avocats.com/actualites/EFE_15_octobre_2024.pdf" target="_blank">
+                                    <div class="news-card">
+                                        <div class="title">« Délégations de pouvoirs, délégations de signature :
+                                            quelles nouvelles pratiques adopter ? » </div>
+                                        <div class="subtitle">Conférence EFE | <span class="date">15 octobre 2024</span></div>
+                                    </div>
+                                </a>
+                                <hr>
+
+                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7161349691043934210/" target="_blank">
+                                    <div class="news-card">
+                                        <div class="title">Séminaire de droit pénal des affaires</div>
+                                        <div class="subtitle">Université de Montpellier (Master de Droit bancaire et financier) | <span class="date">5 & 6 février 2024</span></div>
+                                    </div>
+                                </a>
+                                <hr>
+
+                                <a href="https://www.linkedin.com/posts/activity-7088178548485537792-CHHu/" target="_blank">
+                                    <div class="news-card">
+                                        <div class="title">L’enquête interne et la Convention judiciaire d’intérêt public (CJIP) </div>
+                                        <div class="subtitle">Ecole des Hautes Etudes Appliquées du Droit (HEAD) | <span class="date">Novembre 2023</span></div>
+                                    </div>
+                                </a>
+                                <hr>
+
+                                <a href="https://www.linkedin.com/posts/activity-7029389589916131329-pGGL/" target="_blanck">
+                                    <div class="news-card">
+                                        <div class="title">Séminaire de droit pénal des affaires</div>
+                                        <div class="subtitle">Université de Montpellier (Master de Droit bancaire et financier) | <span class="date">6-7 février 2023</span></div>
+                                    </div>
+                                </a>
+                                <hr>
+
+
                             </div>
-                        </a>
-                        <hr>
+                        </div>
+                        
+                        <div class="col-12 col-md-4 illustration-img col-right" style="background-image: url(images/carreaux.avif)">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="row d-lg-flex mt-4 news-block">
+                        
+                        <div class="col-12 col-md-8 p-0">
 
-                        <a href="https://www.linkedin.com/posts/activity-7088178548485537792-CHHu/" target="_blank">
-                            <div class="news-card">
-                                <div class="title">L’enquête interne et la Convention judiciaire d’intérêt public (CJIP) </div>
-                                <div class="subtitle">Ecole des Hautes Etudes Appliquées du Droit (HEAD) | <span class="date">Novembre 2023</span></div>
+                            <div class="news-cards">
+
+                                <h4 class="text-center">Publications</h4>
+
+                                <hr>
+                                <a href="https://www.lecorre-avocats.com/actualites/napoleon.pdf" target="_blank">
+                                    <div class="news-card">
+                                        <div class="title">« Cryptomonnaies : les créateurs du NapoleonX poursuivis »</div>
+                                        <div class="subtitle">Les Echos | <span class="date">16 février 2024</span></div>
+                                    </div>
+                                </a>
+
+                                <hr>
+                                <a href="https://www.lecorre-avocats.com/actualites/cryptoactifs.pdf" target="_blank">
+                                    <div class="news-card">
+                                        <div class="title">« Les prémices et perspectives du contentieux des cryptoactifs » </div>
+                                        <div class="subtitle">Lamy Droit des Affaires | <span class="date"> Janvier 2024</div>
+                                    </div>
+                                </a>
+                                <hr>
+                                <a href="https://www.lecorre-avocats.com/actualites/preuve_illicite.pdf" target="_blank">
+                                    <div class="news-card">
+                                        <div class="title">« Recevabilité du moyen de preuve illicite produit par une partie privée »</div>
+                                        <div class="subtitle">Revue AJ Pénal (Dalloz) | <span class="date">Octobre 2023</span></div>
+                                    </div>
+                                </a>
+
+                                <hr>
+                                <a href="https://emploi.lefigaro.fr/carriere-remuneration/selon-la-justice-enregistrer-un-salarie-a-son-insu-n-est-pas-une-atteinte-a-la-vie-privee-20230823" target="_blank">
+                                    <div class="news-card">
+                                        <div class="title">« Enregistrer un salarié à son insu n’est pas une atteinte à
+                                            la vie privée »</div>
+                                        <div class="subtitle">Le Figaro | <span class="date">Octobre 2023</span></div>
+                                    </div>
+                                </a>
+
+                                <hr>
+
+
                             </div>
-                        </a>
-                        <hr>
-
-                        <a href="https://www.linkedin.com/posts/activity-7029389589916131329-pGGL/" target="_blanck">
-                            <div class="news-card">
-                                <div class="title">Séminaire de droit pénal des affaires</div>
-                                <div class="subtitle">Université de Montpellier (Master de Droit bancaire et financier) | <span class="date">6-7 février 2023</span></div>
-                            </div>
-                        </a>
-                        <hr>
-
+                        </div>
+                        
+                        <div class="col-12 col-md-4 illustration-img col-right" style="background-image: url(images/colonnes.avif)">
+                        </div>
 
                     </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="actualites.html" class="btn btn-light mt-4">Toutes les actualités</a>
+                    </div>
                 </div>
+            </div>
+
+            <div class="section">
+
+                <div class="container">
+
+                    <div class="split lg-reverse">
+                        <div class="split-infos">
+                            <h4 class="mb-3">Honoraires</h4>
+                            <p>Les honoraires sont librement fixés d’un commun accord avec le client. Ils peuvent être établis selon plusieurs modalités de facturation (facturation au temps passé, forfait, honoraire de résultat) en tenant compte de la complexité du dossier, de la situation économique du client, des délais d’intervention et des diligences à réaliser.</p>
+                            <p> Les honoraires sont clairement définis à l’avance : ils font l'objet d'une convention écrite qui précise le montant et le mode de détermination des honoraires relatifs aux diligences prévisibles. A la demande du client, toute facturation est accompagnée d’un relevé de diligences.</p>
+                            <div class="d-flex justify-content-center mt-4">
+                                <a href="mailto:contact@lecorre-avocats.com" class="btn btn-light mt-4">Demandez une proposition de mission</a>
+                            </div>
+                        </div>
+                        <div class="split-media-container">
+                            <img src="images/jaune.jpg" alt="honoraires">
+                        </div>
+                    </div>
                 
-                <div class="col-12 col-md-4 illustration-img col-right" style="background-image: url(images/carreaux.avif)">
                 </div>
-                
+            </div>
+
+
+            <div class="section bg-light-color">
+                <div class="container";>
+                    <h3 id="contact">Contact</h3>
+                    <div class="short-line bg-blue"></div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 bg-white d-flex align-items-center justify-content-center flex-column py-3">
+                            <img src="images/logo.png" width="140" class="mx-auto mb-3">
+                            <div>49 rue Saint-Roch, 75001 Paris</div>
+                            <div class="my-1"><a href="mailto:contact@lecorre-avocats.com" target="_blank">contact@lecorre-avocats.com</a></div>
+                            <div><a href="tel: +33 (0)6 50 92 96 00">Tél. :  +33 (0)6 50 92 96 00</a></div>
+                            <div class="d-flex justify-content-center mt-3"><a href="https://www.linkedin.com/in/clarisse-le-corre-6235a22b/" target="_blank"><img src="images/linkedin.png" width="30" height="30"></a></div>
+                        </div>
+                        <div class="col-12 col-md-6 p-0 col-right">
+                            <div id="map" style="height: 300px; width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="row d-lg-flex mt-4 news-block">
-                
-                <div class="col-12 col-md-8 p-0">
 
-                    <div class="news-cards">
-
-                        <h4 class="text-center">Publications</h4>
-
-                        <hr>
-                        <a href="https://www.lecorre-avocats.com/actualites/napoleon.pdf" target="_blank">
-                            <div class="news-card">
-                                <div class="title">« Cryptomonnaies : les créateurs du NapoleonX poursuivis »</div>
-                                <div class="subtitle">Les Echos | <span class="date">16 février 2024</span></div>
-                            </div>
-                        </a>
-
-                        <hr>
-                        <a href="https://www.lecorre-avocats.com/actualites/cryptoactifs.pdf" target="_blank">
-                            <div class="news-card">
-                                <div class="title">« Les prémices et perspectives du contentieux des cryptoactifs » </div>
-                                <div class="subtitle">Lamy Droit des Affaires | <span class="date"> Janvier 2024</div>
-                            </div>
-                        </a>
-                        <hr>
-                        <a href="https://www.lecorre-avocats.com/actualites/preuve_illicite.pdf" target="_blank">
-                            <div class="news-card">
-                                <div class="title">« Recevabilité du moyen de preuve illicite produit par une partie privée »</div>
-                                <div class="subtitle">Revue AJ Pénal (Dalloz) | <span class="date">Octobre 2023</span></div>
-                            </div>
-                        </a>
-
-                        <hr>
-                        <a href="https://emploi.lefigaro.fr/carriere-remuneration/selon-la-justice-enregistrer-un-salarie-a-son-insu-n-est-pas-une-atteinte-a-la-vie-privee-20230823" target="_blank">
-                            <div class="news-card">
-                                <div class="title">« Enregistrer un salarié à son insu n’est pas une atteinte à
-                                    la vie privée »</div>
-                                <div class="subtitle">Le Figaro | <span class="date">Octobre 2023</span></div>
-                            </div>
-                        </a>
-
-                        <hr>
-
-
-                    </div>
-                </div>
-                
-                 <div class="col-12 col-md-4 illustration-img col-right" style="background-image: url(images/colonnes.avif)">
-                </div>
-
-            </div>
-            <div class="d-flex justify-content-center mt-4">
-                <a href="actualites.html" class="btn btn-light mt-4">Toutes les actualités</a>
-            </div>
         </div>
-    </div>
 
-    <div class="section">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-        <div class="container">
+        <script>
 
-            <div class="split lg-reverse">
-                <div class="split-infos">
-                    <h4 class="mb-3">Honoraires</h4>
-                    <p>Les honoraires sont librement fixés d’un commun accord avec le client. Ils peuvent être établis selon plusieurs modalités de facturation (facturation au temps passé, forfait, honoraire de résultat) en tenant compte de la complexité du dossier, de la situation économique du client, des délais d’intervention et des diligences à réaliser.</p>
-                    <p> Les honoraires sont clairement définis à l’avance : ils font l'objet d'une convention écrite qui précise le montant et le mode de détermination des honoraires relatifs aux diligences prévisibles. A la demande du client, toute facturation est accompagnée d’un relevé de diligences.</p>
-                    <div class="d-flex justify-content-center mt-4">
-                        <a href="mailto:contact@lecorre-avocats.com" class="btn btn-light mt-4">Demandez une proposition de mission</a>
-                    </div>
-                </div>
-                <div class="split-media-container">
-                    <img src="images/jaune.jpg" alt="honoraires">
-                </div>
-            </div>
+        // Toggle the vertical navbar when the user clicks on a link
+        const nav_items = document.querySelectorAll(".nav-item")
+        nav_items.forEach((nav_item) => {
+            nav_item.addEventListener("click", (event) => {
+            console.log("Pouet");
+            document.querySelector(".navbar-toggler").classList.toggle("collapsed");
+            document.querySelector("#navbarSupportedContent").classList.toggle("show")
+            })
+        })
+
+            const detailsElements = document.querySelectorAll('details');
+            
+            detailsElements.forEach(function(details) {
+            details.addEventListener('toggle', function() {
+                this.querySelector('summary').classList.toggle('opened');
+            });
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+            const mapContainer = document.getElementById('map');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Charger Mapbox uniquement lorsque l'utilisateur voit la carte
+                        loadMapbox();
+                        observer.disconnect();
+                    }
+                });
+            });
+
+            observer.observe(mapContainer);
+
+            function loadMapbox() {
+                const mapboxScript = document.createElement('script');
+                mapboxScript.src = "https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js";
+                document.body.appendChild(mapboxScript);
+
+                mapboxScript.onload = () => {
+                    const mapboxStyle = document.createElement('link');
+                    mapboxStyle.rel = 'stylesheet';
+                    mapboxStyle.href = "https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css";
+                    document.head.appendChild(mapboxStyle);
+
+                    // Initialiser la carte après chargement
+                    mapboxgl.accessToken = 'pk.eyJ1Ijoibm9lbWllcGllcmFydCIsImEiOiJja283NWR1czkwNzZzMnZtdWl2OGZxcjhjIn0.L1NkLHkTIl3hayUXvkfOAg';
+                    const map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/noemiepierart/cm3n0bxw700qn01s70gjba36r',
+                        center: [2.333023, 48.866674],
+                        zoom: 15
+                    });
+
+                    map.addControl(new mapboxgl.NavigationControl());
+
+                    new mapboxgl.Marker({ color: '#1F46A6' })
+                        .setLngLat([2.333023, 48.866674])
+                        .addTo(map);
+                };
+            }
+        });
         
-        </div>
-    </div>
-
-
-    <div class="section bg-light-color">
-        <div class="container";>
-            <h3 id="contact">Contact</h3>
-            <div class="short-line bg-blue"></div>
-            <div class="row">
-                <div class="col-12 col-md-6 bg-white d-flex align-items-center justify-content-center flex-column py-3">
-                    <img src="images/logo.png" width="140" class="mx-auto mb-3">
-                    <div>49 rue Saint-Roch, 75001 Paris</div>
-                    <div class="my-1"><a href="mailto:contact@lecorre-avocats.com" target="_blank">contact@lecorre-avocats.com</a></div>
-                    <div><a href="tel: +33 (0)6 50 92 96 00">Tél. :  +33 (0)6 50 92 96 00</a></div>
-                    <div class="d-flex justify-content-center mt-3"><a href="https://www.linkedin.com/in/clarisse-le-corre-6235a22b/" target="_blank"><img src="images/linkedin.png" width="30" height="30"></a></div>
-                </div>
-                <div class="col-12 col-md-6 p-0 col-right">
-                    <div id="map" style="height: 300px; width: 100%"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        </script>
 
     <script>
-
-      // Toggle the vertical navbar when the user clicks on a link
-      const nav_items = document.querySelectorAll(".nav-item")
-      nav_items.forEach((nav_item) => {
-        nav_item.addEventListener("click", (event) => {
-          console.log("Pouet");
-          document.querySelector(".navbar-toggler").classList.toggle("collapsed");
-          document.querySelector("#navbarSupportedContent").classList.toggle("show")
-        })
-      })
-
-        const detailsElements = document.querySelectorAll('details');
-        
-        detailsElements.forEach(function(details) {
-        details.addEventListener('toggle', function() {
-            this.querySelector('summary').classList.toggle('opened');
-        });
+        const correctPassword = "wL7WQ4kLa9"; 
+        const content = document.getElementById("content");
+        const passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'), {
+        backdrop: 'static',
+        keyboard: false
         });
 
-        document.addEventListener("DOMContentLoaded", function () {
-        const mapContainer = document.getElementById('map');
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Charger Mapbox uniquement lorsque l'utilisateur voit la carte
-                    loadMapbox();
-                    observer.disconnect();
-                }
-            });
-        });
+        // Afficher la modal au chargement
+        window.onload = () => passwordModal.show();
 
-        observer.observe(mapContainer);
-
-        function loadMapbox() {
-            const mapboxScript = document.createElement('script');
-            mapboxScript.src = "https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js";
-            document.body.appendChild(mapboxScript);
-
-            mapboxScript.onload = () => {
-                const mapboxStyle = document.createElement('link');
-                mapboxStyle.rel = 'stylesheet';
-                mapboxStyle.href = "https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css";
-                document.head.appendChild(mapboxStyle);
-
-                // Initialiser la carte après chargement
-                mapboxgl.accessToken = 'pk.eyJ1Ijoibm9lbWllcGllcmFydCIsImEiOiJja283NWR1czkwNzZzMnZtdWl2OGZxcjhjIn0.L1NkLHkTIl3hayUXvkfOAg';
-                const map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/noemiepierart/cm3n0bxw700qn01s70gjba36r',
-                    center: [2.333023, 48.866674],
-                    zoom: 15
-                });
-
-                map.addControl(new mapboxgl.NavigationControl());
-
-                new mapboxgl.Marker({ color: '#1F46A6' })
-                    .setLngLat([2.333023, 48.866674])
-                    .addTo(map);
-            };
+        function checkPassword() {
+        const input = document.getElementById("passwordInput").value;
+        if (input === correctPassword) {
+            content.classList.remove("d-none"); // montre le contenu
+            passwordModal.hide();
+        } else {
+            alert("Mot de passe incorrect !");
         }
-    });
-       
+        }
     </script>
-
   </body>
 </html>

@@ -59,239 +59,257 @@
   </head>
   <body>
 
-    <div class="navbar navbar-expand-lg navbar-light navbar-lewagon">
-        <div class="container">
-            <a class="navbar-brand" href="/index.html">
-            <img src="images/logo.png" width="150">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" aria-label="Main Navigation">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#cabinet" data-bs-target=".navbar-collapse" >Le cabinet</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#expertises" data-bs-target=".navbar-collapse">Expertises</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#actualites" data-bs-target=".navbar-collapse">Actualités</a>
-                </li>
-                <li class="nav-item">
-                    <div class="d-flex">
-                        <a class="btn btn-flat" href="#contact" data-bs-target=".navbar-collapse">Contact</a>
+    <!-- Modal Bootstrap pour le mot de passe -->
+    <div class="modal fade" id="passwordModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">Accès protégé</h5>
+            </div>
+            <div class="modal-body">
+            <input type="password" id="passwordInput" class="form-control" placeholder="Mot de passe">
+            </div>
+            <div class="modal-footer">
+            <button class="btn btn-primary" onclick="checkPassword()">Entrer</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div id="content" class="d-none">
+        <div class="navbar navbar-expand-lg navbar-light navbar-lewagon">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html">
+                <img src="images/logo.png" width="150">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" aria-label="Main Navigation">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#cabinet" data-bs-target=".navbar-collapse" >Le cabinet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#expertises" data-bs-target=".navbar-collapse">Expertises</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#actualites" data-bs-target=".navbar-collapse">Actualités</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="d-flex">
+                            <a class="btn btn-flat" href="#contact" data-bs-target=".navbar-collapse">Contact</a>
+                        </div>
+                    </li>
+
+                </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section bg-light" >
+            <div class="container" id="actualites-container">
+            
+                <h1 id="actualites" class="h3 text-center">Actualités</h1>
+                <div class="short-line bg-blue mx-auto"></div>
+            
+                    <div class="news-cards" style="box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;">
+
+                            <h4 class="text-center">Interventions</h4>
+                            
+                            <hr>
+
+                            <a href="https://www.lecorre-avocats.com/actualites/EFE_15_octobre_2024.pdf" target="_blank">
+                                <div class="news-card">
+                                    <div class="title">« Délégations de pouvoirs, délégations de signature :
+                                        quelles nouvelles pratiques adopter&nbsp;?&nbsp;» </div>
+                                    <div class="subtitle">Conférence EFE | <span class="date">15 octobre 2024</span></div>
+                                </div>
+                            </a>
+                            <hr>
+
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7161349691043934210/" target="_blank">
+                                <div class="news-card">
+                                    <div class="title">Séminaire de droit pénal des affaires</div>
+                                    <div class="subtitle">Université de Montpellier (Master de Droit bancaire et financier) | <span class="date">5 & 6 février 2024</span></div>
+                                </div>
+                            </a>
+                            <hr>
+
+                            <a href="https://www.linkedin.com/posts/activity-7088178548485537792-CHHu/" target="_blank">
+                                <div class="news-card">
+                                    <div class="title">L’enquête interne et la Convention judiciaire d’intérêt public (CJIP) </div>
+                                    <div class="subtitle">Ecole des Hautes Etudes Appliquées du Droit (HEAD) | <span class="date">Novembre 2023</span></div>
+                                </div>
+                            </a>
+                            <hr>
+
+                            <a href="https://www.linkedin.com/posts/activity-7029389589916131329-pGGL/" target="_blanck">
+                                <div class="news-card">
+                                    <div class="title">Séminaire de droit pénal des affaires</div>
+                                    <div class="subtitle">Université de Montpellier (Master de Droit bancaire et financier) | <span class="date">6-7 février 2023</span></div>
+                                </div>
+                            </a>
+                            <hr>
+
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7009506903449821184/" target="_blank">
+                                <div class="news-card">
+                                    <div class="title">« Le risque pénal du dirigeant et la délégation de pouvoirs » </div>
+                                    <div class="subtitle">Petit-déjeuner thématique | <span class="date">Décembre 2022</span></div>
+                                </div>
+                            </a>
+                            <hr>
                     </div>
-                </li>
-
-            </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="section bg-light" >
-        <div class="container" id="actualites-container">
-           
-            <h1 id="actualites" class="h3 text-center">Actualités</h1>
-            <div class="short-line bg-blue mx-auto"></div>
-           
-                <div class="news-cards" style="box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;">
-
-                        <h4 class="text-center">Interventions</h4>
                         
-                        <hr>
+                    <div class="news-cards mt-5" style="box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;">
+                        <h4 class="text-center">Publications</h4>
 
-                        <a href="https://www.lecorre-avocats.com/actualites/EFE_15_octobre_2024.pdf" target="_blank">
+                        <hr>
+                        <a href="https://www.lecorre-avocats.com/actualites/napoleon.pdf" target="_blank">
                             <div class="news-card">
-                                <div class="title">« Délégations de pouvoirs, délégations de signature :
-                                    quelles nouvelles pratiques adopter&nbsp;?&nbsp;» </div>
-                                <div class="subtitle">Conférence EFE | <span class="date">15 octobre 2024</span></div>
+                                <div class="title">« Cryptomonnaies : les créateurs du NapoleonX poursuivis »</div>
+                                <div class="subtitle">Les Echos | <span class="date">16 février 2024</span></div>
+                            </div>
+                        </a>
+
+                        <hr>
+                        <a href="https://www.lecorre-avocats.com/actualites/cryptoactifs.pdf" target="_blank">
+                            <div class="news-card">
+                                <div class="title">« Les prémices et perspectives du contentieux des cryptoactifs » </div>
+                                <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date"> Janvier 2024</div>
+                            </div>
+                        </a>
+                        <hr>
+                        <a href="https://www.lecorre-avocats.com/actualites/preuve_illicite.pdf" target="_blank">
+                            <div class="news-card">
+                                <div class="title">« Recevabilité du moyen de preuve illicite produit par une partie privée »</div>
+                                <div class="subtitle">Revue AJ Pénal (Dalloz) | <span class="date">Octobre 2023</span></div>
+                            </div>
+                        </a>
+
+                        <hr>
+                        <a href="https://emploi.lefigaro.fr/carriere-remuneration/selon-la-justice-enregistrer-un-salarie-a-son-insu-n-est-pas-une-atteinte-a-la-vie-privee-20230823" target="_blank">
+                            <div class="news-card">
+                                <div class="title">« Enregistrer un salarié à son insu n’est pas une atteinte à
+                                    la vie privée »</div>
+                                <div class="subtitle">Le Figaro | <span class="date">Octobre 2023</span></div>
+                            </div>
+                        </a>
+
+                        <hr>
+                        <a href="https://www.beaboss.fr/Thematique/juridique-1055/Breves/Prevenir-le-risque-penal-en-entreprise-la-delegation-de-pouvoirs-377899.htm" target="_blank">
+                            <div class="news-card">
+                                <div class="title">« Prévenir le risque pénal en entreprise : la délégation de
+                                    pouvoirs »</div>
+                                <div class="subtitle">Be A Boss | <span class="date">23 décembre 2022</span></div>
+                            </div>
+                        </a>
+
+                        <hr>
+                        
+                        <a href="https://www.beaboss.fr/Thematique/juridique-1055/Breves/Conseils-pratiques-pour-la-mise-en-place-de-delegations-de-377254.htm" target="_blank">
+                            <div class="news-card">
+                                <div class="title">« Conseils pratiques pour la mise en œuvre de délégations
+                                    de pouvoirs »</div>
+                                <div class="subtitle">Be A Boss | <span class="date">22 décembre 2022</span></div>
                             </div>
                         </a>
                         <hr>
 
-                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7161349691043934210/" target="_blank">
+                        <a href="https://www.avosial.fr/medias/org-1522/shared/actuel-rh---16.05.2022.pdf" target="_blank">
                             <div class="news-card">
-                                <div class="title">Séminaire de droit pénal des affaires</div>
-                                <div class="subtitle">Université de Montpellier (Master de Droit bancaire et financier) | <span class="date">5 & 6 février 2024</span></div>
+                                <div class="title">« Le harcèlement en entreprise et la responsabilité pénale
+                                    du dirigeant »</div>
+                                <div class="subtitle">Actuel RH | <span class="date">mai 2022</span></div>
                             </div>
                         </a>
                         <hr>
 
-                        <a href="https://www.linkedin.com/posts/activity-7088178548485537792-CHHu/" target="_blank">
+
+                        <a href="https://www.lecorre-avocats.com/actualites/annonceurs.pdf" target="_blank">
                             <div class="news-card">
-                                <div class="title">L’enquête interne et la Convention judiciaire d’intérêt public (CJIP) </div>
-                                <div class="subtitle">Ecole des Hautes Etudes Appliquées du Droit (HEAD) | <span class="date">Novembre 2023</span></div>
+                                <div class="title">« Allégations environnementales : l’écoblanchiment et la responsabilité pénale des annonceurs »</div>
+                                <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date">Décembre 2021</span></div>
+                            </div>
+                        </a>
+
+                        <hr>
+                        
+                        <a href="https://www.lecorre-avocats.com/actualites/tapie.pdf" target="_blank">
+                            <div class="news-card">
+                                <div class="title">« Affaire Tapie-Crédit Lyonnais, chronique d’une relaxe »</div>
+                                <div class="subtitle">AJ Pénal (Dalloz) | <span class="date">Octobre 2019</span></div>
                             </div>
                         </a>
                         <hr>
 
-                        <a href="https://www.linkedin.com/posts/activity-7029389589916131329-pGGL/" target="_blanck">
+                        <a href="https://www.lecorre-avocats.com/actualites/alerte.pdf" target="_blank">
                             <div class="news-card">
-                                <div class="title">Séminaire de droit pénal des affaires</div>
-                                <div class="subtitle">Université de Montpellier (Master de Droit bancaire et financier) | <span class="date">6-7 février 2023</span></div>
+                                <div class="title">« Réflexions pratiques sur la mise en œuvre du dispositif
+                                    d’alerte professionnelle »</div>
+                                <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date">Avril 2017</span></div>
                             </div>
                         </a>
                         <hr>
 
-                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7009506903449821184/" target="_blank">
+                        <a href="https://www.lecorre-avocats.com/actualites/delegation.pdf" target="_blank">
                             <div class="news-card">
-                                <div class="title">« Le risque pénal du dirigeant et la délégation de pouvoirs » </div>
-                                <div class="subtitle">Petit-déjeuner thématique | <span class="date">Décembre 2022</span></div>
+                                <div class="title">« La délégation de pouvoirs et la prévention du risque
+                                    pénal en entreprise »</div>
+                                <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date">Septembre 2016</span></div>
                             </div>
                         </a>
                         <hr>
-                </div>
-                    
-                <div class="news-cards mt-5" style="box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;">
-                    <h4 class="text-center">Publications</h4>
+                        <a href="https://www.lecorre-avocats.com/actualites/sous_traitants.pdf" target="_blank">
+                            <div class="news-card">
+                                <div class="title">« La responsabilité pénale des personnes morales du fait
+                                    des sous-traitants »</div>
+                                <div class="subtitle">Lettre Droit &amp; Réglementation | <span class="date">Juin 2014</span></div>
+                            </div>
+                        </a>
+                        <hr>
 
-                    <hr>
-                    <a href="https://www.lecorre-avocats.com/actualites/napoleon.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Cryptomonnaies : les créateurs du NapoleonX poursuivis »</div>
-                            <div class="subtitle">Les Echos | <span class="date">16 février 2024</span></div>
-                        </div>
-                    </a>
+                        <a href="https://www.lecorre-avocats.com/actualites/amf.pdf" target="_blank">
+                            <div class="news-card">
+                                <div class="title">« Les droits de la défense mis à l&#39;épreuve par l&#39;évolution
+                                des pouvoirs d&#39;enquête de l&#39;AMF »</div>
+                                <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date">Mai 2014</span></div>
+                            </div>
+                        </a>
+                        <hr>
 
-                    <hr>
-                    <a href="https://www.lecorre-avocats.com/actualites/cryptoactifs.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Les prémices et perspectives du contentieux des cryptoactifs » </div>
-                            <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date"> Janvier 2024</div>
-                        </div>
-                    </a>
-                    <hr>
-                    <a href="https://www.lecorre-avocats.com/actualites/preuve_illicite.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Recevabilité du moyen de preuve illicite produit par une partie privée »</div>
-                            <div class="subtitle">Revue AJ Pénal (Dalloz) | <span class="date">Octobre 2023</span></div>
-                        </div>
-                    </a>
+                        <a href="https://www.lecorre-avocats.com/actualites/donnees_personnelles.pdf" target="_blank">
+                            <div class="news-card">
+                                <div class="title">« L’entreprise et la protection des données personnelles »</div>
+                                <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date">Novembre 2013</span></div>
+                            </div>
+                        </a>
 
-                    <hr>
-                    <a href="https://emploi.lefigaro.fr/carriere-remuneration/selon-la-justice-enregistrer-un-salarie-a-son-insu-n-est-pas-une-atteinte-a-la-vie-privee-20230823" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Enregistrer un salarié à son insu n’est pas une atteinte à
-                                la vie privée »</div>
-                            <div class="subtitle">Le Figaro | <span class="date">Octobre 2023</span></div>
-                        </div>
-                    </a>
-
-                    <hr>
-                    <a href="https://www.beaboss.fr/Thematique/juridique-1055/Breves/Prevenir-le-risque-penal-en-entreprise-la-delegation-de-pouvoirs-377899.htm" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Prévenir le risque pénal en entreprise : la délégation de
-                                pouvoirs »</div>
-                            <div class="subtitle">Be A Boss | <span class="date">23 décembre 2022</span></div>
-                        </div>
-                    </a>
-
-                    <hr>
-                    
-                    <a href="https://www.beaboss.fr/Thematique/juridique-1055/Breves/Conseils-pratiques-pour-la-mise-en-place-de-delegations-de-377254.htm" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Conseils pratiques pour la mise en œuvre de délégations
-                                de pouvoirs »</div>
-                            <div class="subtitle">Be A Boss | <span class="date">22 décembre 2022</span></div>
-                        </div>
-                    </a>
-                    <hr>
-
-                    <a href="https://www.avosial.fr/medias/org-1522/shared/actuel-rh---16.05.2022.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Le harcèlement en entreprise et la responsabilité pénale
-                                du dirigeant »</div>
-                            <div class="subtitle">Actuel RH | <span class="date">mai 2022</span></div>
-                        </div>
-                    </a>
-                    <hr>
-
-
-                    <a href="https://www.lecorre-avocats.com/actualites/annonceurs.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Allégations environnementales : l’écoblanchiment et la responsabilité pénale des annonceurs »</div>
-                            <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date">Décembre 2021</span></div>
-                        </div>
-                    </a>
-
-                    <hr>
-                    
-                    <a href="https://www.lecorre-avocats.com/actualites/tapie.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Affaire Tapie-Crédit Lyonnais, chronique d’une relaxe »</div>
-                            <div class="subtitle">AJ Pénal (Dalloz) | <span class="date">Octobre 2019</span></div>
-                        </div>
-                    </a>
-                    <hr>
-
-                    <a href="https://www.lecorre-avocats.com/actualites/alerte.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Réflexions pratiques sur la mise en œuvre du dispositif
-                                d’alerte professionnelle »</div>
-                            <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date">Avril 2017</span></div>
-                        </div>
-                    </a>
-                    <hr>
-
-                    <a href="https://www.lecorre-avocats.com/actualites/delegation.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« La délégation de pouvoirs et la prévention du risque
-                                pénal en entreprise »</div>
-                            <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date">Septembre 2016</span></div>
-                        </div>
-                    </a>
-                    <hr>
-                    <a href="https://www.lecorre-avocats.com/actualites/sous_traitants.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« La responsabilité pénale des personnes morales du fait
-                                des sous-traitants »</div>
-                            <div class="subtitle">Lettre Droit &amp; Réglementation | <span class="date">Juin 2014</span></div>
-                        </div>
-                    </a>
-                    <hr>
-
-                    <a href="https://www.lecorre-avocats.com/actualites/amf.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« Les droits de la défense mis à l&#39;épreuve par l&#39;évolution
-                            des pouvoirs d&#39;enquête de l&#39;AMF »</div>
-                            <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date">Mai 2014</span></div>
-                        </div>
-                    </a>
-                    <hr>
-
-                    <a href="https://www.lecorre-avocats.com/actualites/donnees_personnelles.pdf" target="_blank">
-                        <div class="news-card">
-                            <div class="title">« L’entreprise et la protection des données personnelles »</div>
-                            <div class="subtitle">Revue Lamy Droit des Affaires | <span class="date">Novembre 2013</span></div>
-                        </div>
-                    </a>
-
-                </div>
-    
+                    </div>
+        
+            </div>
         </div>
-    </div>
 
-    <div class="section bg-blue">
-        <div class="container";>
-            <h3 id="contact" class="text-white">Contact</h3>
-            <div class="short-line bg-white"></div>
-            <div class="row">
-                <div class="col-12 col-md-6 bg-white d-flex align-items-center justify-content-center flex-column py-3 black">
-                    <img src="images/logo.png" width="140" class="mx-auto mb-3">
-                    <div>49 rue Saint-Roch, 75001 Paris</div>
-                    <div class="my-1"><a href="mailto:contact@lecorre-avocats.com" target="_blank">contact@lecorre-avocats.com</a></div>
-                    <div><a href="tel: +33 (0)6 50 92 96 00">Tél. :  +33 (0)6 50 92 96 00</a></div>
-                    <div class="d-flex justify-content-center mt-3"><a href="https://www.linkedin.com/in/clarisse-le-corre-6235a22b/" target="_blank"><img src="images/linkedin.png" width="30" height="30"></a></div>
-                </div>
-                <div class="col-12 col-md-6 p-0 col-right">
-                    <div id="map" style="height: 300px; width: 100%"></div>
+        <div class="section bg-blue">
+            <div class="container";>
+                <h3 id="contact" class="text-white">Contact</h3>
+                <div class="short-line bg-white"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 bg-white d-flex align-items-center justify-content-center flex-column py-3 black">
+                        <img src="images/logo.png" width="140" class="mx-auto mb-3">
+                        <div>49 rue Saint-Roch, 75001 Paris</div>
+                        <div class="my-1"><a href="mailto:contact@lecorre-avocats.com" target="_blank">contact@lecorre-avocats.com</a></div>
+                        <div><a href="tel: +33 (0)6 50 92 96 00">Tél. :  +33 (0)6 50 92 96 00</a></div>
+                        <div class="d-flex justify-content-center mt-3"><a href="https://www.linkedin.com/in/clarisse-le-corre-6235a22b/" target="_blank"><img src="images/linkedin.png" width="30" height="30"></a></div>
+                    </div>
+                    <div class="col-12 col-md-6 p-0 col-right">
+                        <div id="map" style="height: 300px; width: 100%"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -358,6 +376,28 @@
         }
     });
        
+    </script>
+
+    <script>
+        const correctPassword = "wL7WQ4kLa9"; 
+        const content = document.getElementById("content");
+        const passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'), {
+        backdrop: 'static',
+        keyboard: false
+        });
+
+        // Afficher la modal au chargement
+        window.onload = () => passwordModal.show();
+
+        function checkPassword() {
+        const input = document.getElementById("passwordInput").value;
+        if (input === correctPassword) {
+            content.classList.remove("d-none"); // montre le contenu
+            passwordModal.hide();
+        } else {
+            alert("Mot de passe incorrect !");
+        }
+        }
     </script>
 
   </body>
